@@ -180,10 +180,11 @@ export default function App() {
   useEffect(() => {
     let destroyed = false
 
+    const base = import.meta.env.BASE_URL
     void Promise.all([
-      fetch('/data/ds_points.json').then((r) => r.json()),
-      fetch('/data/kraj_stats.json').then((r) => r.json()),
-      fetch('/data/kraje.geojson').then((r) => r.json()),
+      fetch(`${base}data/ds_points.json`).then((r) => r.json()),
+      fetch(`${base}data/kraj_stats.json`).then((r) => r.json()),
+      fetch(`${base}data/kraje.geojson`).then((r) => r.json()),
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ]).then(([pts, kstats, krajeGeo]: [DSPoint[], KrajStat[], any]) => {
       if (destroyed) return
