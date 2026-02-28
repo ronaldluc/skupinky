@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/ds_utils/',
+  base: '/skupinky/',
   server: { port: 6007, host: '0.0.0.0' },
   preview: { port: 6007, host: '0.0.0.0' },
 })
