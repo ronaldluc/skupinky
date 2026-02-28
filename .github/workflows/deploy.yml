@@ -30,8 +30,12 @@ jobs:
         run: npm ci
         working-directory: webapp
 
-      - name: Build
-        run: npm run build
+      - name: TypeScript check
+        run: npx tsc -b
+        working-directory: webapp
+
+      - name: Vite build
+        run: npx vite build
         working-directory: webapp
 
       - uses: actions/upload-pages-artifact@v3
