@@ -1,0 +1,8 @@
+node_modules/
+dist/
+data/all_ds/
+data/overview/
+summary/
+*.pyc
+__pycache__/
+.vite/
